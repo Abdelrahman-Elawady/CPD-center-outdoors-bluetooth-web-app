@@ -4,7 +4,6 @@ let notifyCharacteristic;
 
 document.getElementById('connect').addEventListener('click', async () => {
     try {
-        await new Promise(resolve => setTimeout(resolve, 2000)); // 2-second delay
 
         device = await navigator.bluetooth.requestDevice({
             acceptAllDevices: true,
