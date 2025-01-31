@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPD Outdoors Bluetooth Web App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to control Panel</h1>
+    <label id="status">Disconnected</label>
+    <button id="connect">Connect</button>
+    <div>
+        <button id="availability" class="green" disabled>Available</button>
+        <button id="reset" disabled>Reset</button>
+        <button id="clear" disabled>Clear</button>
+        <label class="switch">
+            <input type="checkbox" id="powerSwitch" checked disabled>
+            <span class="slider"></span>
+        </label>
+        <label id="powerLabel">screen: on</label>
+        <label class="switch">
+            <input type="checkbox" id="multicolorSwitch" disabled>
+            <span class="slider"></span>
+        </label>
+        <label id="multicolorLabel">Multicolor: off</label>
+        <label>
+            Brightness: <span id="brightnessValue">122</span>
+            <input type="range" id="brightnessSlider" min="0" max="200" value="122" disabled>
+        </label>
+        <label>
+            Speed: <span id="speedValue">20</span>
+            <input type="range" id="speedSlider" min="10" max="150" value="20" disabled>
+        </label>
+        <label>
+            Size: <span id="sizeValue">3</span>
+            <input type="range" id="sizeSlider" min="1" max="7" value="3" disabled>
+        </label>
+        <label>
+            Color: <input type="color" id="colorPicker" disabled>
+        </label>
+    </div>
+    <textarea id="terminal" rows="10" cols="50" placeholder="Enter text or commands here..." disabled></textarea>
+    <button id="sendCommand" disabled>Send</button>
+    <label id="notifyValue">Notify Value: N/A</label>
+    <div>
+        <label class="switch">
+            <input type="checkbox" id="wrapSwitch" disabled>
+            <span class="slider"></span>
+        </label>
+        <label id="wrapLabel">Wrap Mode: off</label>
+        <label class="switch">
+            <input type="checkbox" id="plasmaSwitch" disabled>
+            <span class="slider"></span>
+        </label>
+        <label id="plasmaLabel">Plasma Mode: off</label>
+        <div id="fontsDiv">
+            <h3 id="fonts">Fonts</h3>
+            <button id="fontDefault" disabled>Default</button>
+            <button id="fontSans" disabled>Sans</button>
+            <button id="fontSerif" disabled>Serif</button>
+            <button id="fontMono" disabled>Mono</button>
+        </div>
+        <div>
+            <button id="toggleButton1" disabled>Emoji 1 🔽</button>
+            <div id="emoji1Section">
+                <button class="emojiButton" data-emoji="emoji1:off" style="color: rgb(170, 45, 45);">no emoji 1</button>
+                <button class="emojiButton" data-emoji="emoji1:heart">❤️</button>
+                <button class="emojiButton" data-emoji="emoji1:grin">😁</button>
+                <button class="emojiButton" data-emoji="emoji1:smiley">😀</button>
+                <button class="emojiButton" data-emoji="emoji1:hugging_face">🤗</button>
+                <button class="emojiButton" data-emoji="emoji1:relaxed"><img src="relaxed.png" alt="pencil icon" width="20px" height="20px"></button>
+                <button class="emojiButton" data-emoji="emoji1:star_struck">🤩</button>
+                <button class="emojiButton" data-emoji="emoji1:thumbs_up">👍</button>
+                <button class="emojiButton" data-emoji="emoji1:wave">👋</button>
+                <button class="emojiButton" data-emoji="emoji1:rose">🌹</button>
+                <button class="emojiButton" data-emoji="emoji1:fire">🔥</button>
+                <button class="emojiButton" data-emoji="emoji1:pencil"><img src="pencil2.png" alt="pencil icon" width="20px" height="20px"></button>
+                <button class="emojiButton" data-emoji="emoji1:eyes">👀</button>
+                <button class="emojiButton" data-emoji="emoji1:books">📚</button>
+                <button class="emojiButton" data-emoji="emoji1:grad_hat">🎓</button>
+                <button class="emojiButton" data-emoji="emoji1:male_student">👨‍🎓</button>
+                <button class="emojiButton" data-emoji="emoji1:female_student">👩‍🎓</button>
+                <button class="emojiButton" data-emoji="emoji1:male_technologist">👨‍💻</button>
+                <button class="emojiButton" data-emoji="emoji1:blank_person">👤</button>
+                <button class="emojiButton" data-emoji="emoji1:x">❌</button>
+                <button class="emojiButton" data-emoji="emoji1:check_mark">✅</button>
+                <button class="emojiButton" data-emoji="emoji1:heart_eyes">😍</button>
+                <button class="emojiButton" data-emoji="emoji1:cpd_center_logo"><img src="cpd_center_logo.png" width="30px" height="30px" alt="career center logo"></button>
+                <button class="emojiButton" data-emoji="emoji1:upm2_logo"><img src="upm2_logo.png" width="30px" height="30px" alt="UPM logo"></button>
+                <button class="emojiButton" data-emoji="emoji1:flag_sa"><img src="flag-sa.png" width="30px" height="30px" alt="saudi flag"></button>
+            </div>
+        </div>
+        <div>
+            <button id="toggleButton2" disabled>Emoji 2 🔽</button>
+            <div id="emoji2Section">
+                <button class="emojiButton" data-emoji="emoji2:off" style="color: rgb(170, 45, 45);">no emoji 2</button>
+                <button class="emojiButton" data-emoji="emoji2:heart">❤️</button>
+                <button class="emojiButton" data-emoji="emoji2:grin">😁</button>
+                <button class="emojiButton" data-emoji="emoji2:smiley">😀</button>
+                <button class="emojiButton" data-emoji="emoji2:hugging_face">🤗</button>
+                <button class="emojiButton" data-emoji="emoji2:relaxed"><img src="relaxed.png" alt="pencil icon" width="20px" height="20px"></button>
+                <button class="emojiButton" data-emoji="emoji2:star_struck">🤩</button>
+                <button class="emojiButton" data-emoji="emoji2:thumbs_up">👍</button>
+                <button class="emojiButton" data-emoji="emoji2:wave">👋</button>
+                <button class="emojiButton" data-emoji="emoji2:rose">🌹</button>
+                <button class="emojiButton" data-emoji="emoji2:fire">🔥</button>
+                <button class="emojiButton" data-emoji="emoji2:pencil"><img src="pencil2.png" alt="pencil icon" width="20px" height="20px"></button>
+                <button class="emojiButton" data-emoji="emoji2:eyes">👀</button>
+                <button class="emojiButton" data-emoji="emoji2:books">📚</button>
+                <button class="emojiButton" data-emoji="emoji2:grad_hat">🎓</button>
+                <button class="emojiButton" data-emoji="emoji2:male_student">👨‍🎓</button>
+                <button class="emojiButton" data-emoji="emoji2:female_student">👩‍🎓</button>
+                <button class="emojiButton" data-emoji="emoji2:male_technologist">👨‍💻</button>
+                <button class="emojiButton" data-emoji="emoji2:blank_person">👤</button>
+                <button class="emojiButton" data-emoji="emoji2:x">❌</button>
+                <button class="emojiButton" data-emoji="emoji2:check_mark">✅</button>
+                <button class="emojiButton" data-emoji="emoji2:heart_eyes">😍</button>
+                <button class="emojiButton" data-emoji="emoji2:cpd_center_logo"><img src="cpd_center_logo.png" width="30px" height="30px" alt="career center logo"></button>
+                <button class="emojiButton" data-emoji="emoji2:upm2_logo"><img src="upm2_logo.png" width="30px" height="30px" alt="UPM logo"></button>
+                <button class="emojiButton" data-emoji="emoji2:flag_sa"><img src="flag-sa.png" width="30px" height="30px" alt="saudi flag"></button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
