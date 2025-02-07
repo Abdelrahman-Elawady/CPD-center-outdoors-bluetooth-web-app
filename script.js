@@ -135,6 +135,14 @@ document.getElementById('wrapSwitch').addEventListener('change', async (event) =
     document.getElementById('wrapLabel').textContent = `${command}`;
 });
 
+document.getElementById('lineSwitch').addEventListener('change', async (event) => {
+    let command = event.target.checked ? 'drawline:on' : 'drawline:off';
+    let encoder = new TextEncoder();
+    let data = encoder.encode(command);
+    await characteristic.writeValue(data);
+    document.getElementById('lineLabel').textContent = `${command}`;
+});
+
 document.getElementById('plasmaSwitch').addEventListener('change', async (event) => {
     let command = event.target.checked ? 'plasma:on' : 'plasma:off';
     let encoder = new TextEncoder();
